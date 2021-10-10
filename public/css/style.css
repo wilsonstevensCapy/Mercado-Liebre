@@ -1,0 +1,72 @@
+body{
+   
+    background-color: #EAC926;
+    font-family: 'Roboto', sans-serif;
+    
+}
+h1{
+    
+    font-family: 'Roboto', sans-serif;
+
+}
+h2{
+   
+    font-family: 'Roboto', sans-serif;
+
+}
+p{
+  
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+
+}
+.parrafo-Destacado {
+  
+    color: salmon;
+    font-size: 20px;
+}
+.hand{
+    display: flex;
+    size: 2em;
+}
+.Burger-menu{
+    display: flex;
+    size: 6em;
+}
+.account{
+    display: flex;
+    size: 2em;
+    
+}
+.login{
+    display: flex;    
+    size: 2em;
+}
+.security{
+    display: flex;
+    justify-content: center;
+    color: blue; 
+    size: 6em;
+}
+.credit-card{
+    display: flex;
+    justify-content: center;
+    color: blue;
+    size: 6em;
+}
+.gift{
+    display: flex;
+    justify-content: center;
+    color: blue; 
+    size: 6em;
+}
+strong{
+    display: flex;
+    color: black;
+
+}
+p strong{
+    display: flex;
+    color: black; 
+
+}
