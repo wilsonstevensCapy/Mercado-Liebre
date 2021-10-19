@@ -2,7 +2,120 @@ body{
    
     background-color: #EAC926;
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
     
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+/* header */
+header{
+    background-color: #EAC926;
+    font-family: 'Roboto', sans-serif;
+    width: 100vw;    
+    margin: auto;    
+
+}
+header .form{
+    width: 70vw;
+    margin:auto; 
+    margin-top: 10px;
+    padding: 10px;    
+
+}
+header p{
+    width: 70vw;
+    margin:auto; 
+}
+header nav {
+    margin-top: 10px;
+}
+header nav ul li a {
+    display: block;
+    text-decoration: none;  
+    text-align: center;
+
+}
+header .Burger-menu{
+    display: block;
+    width: 30px;
+    height: 30px;
+    size: 6em;
+    text-align: center;
+    padding: 5px;
+    background-color: blue;
+    border-radius: 5px;
+    color: white;
+    margin: auto;
+    margin-top: 10px;
+}
+
+img{
+    max-width: 80vw;
+}
+/* main */
+
+main{
+    background-color: gainsboro;
+    font-family: 'Roboto', sans-serif;
+    padding: 10px;
+    width: 90%;
+    height: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    margin: auto;
+    margin-top: 20px;
+    justify-content: center;    
+
+}
+main .ultima-visita{
+    width: 70vw;
+    margin: auto; 
+    
+}
+main .ultima-visita .productos{
+    width: 80%;
+    margin: auto;
+    background-color: white;
+    
+}
+main .ultima-visita .productos article{
+    box-shadow: 3px 2px 15px 2px #000000; 
+    margin-top: 20px;   
+    
+}
+main .ultima-visita .productos article img{
+    max-width: 90%;   
+    border-radius: 10px;
+    overflow: hidden; 
+}
+
+
+
+
+/* Configurando vista para distintos dispositivos, min-width se aplica desde ese valor en adelante  */
+
+@media (min-width: 361px){
+    .Burger-menu{
+        display: none;
+        
+    }
+
+}
+@media (min-width: 769px){
+    .Burger-menu{
+        display: none;
+        
+    }
+    *{
+        box-shadow:none
+
+    }
+  
+
 }
 h1{
     
@@ -11,6 +124,10 @@ h1{
 }
 h2{
    
+    font-family: 'Roboto', sans-serif;
+
+}
+h3{
     font-family: 'Roboto', sans-serif;
 
 }
@@ -29,10 +146,7 @@ p{
     display: flex;
     size: 2em;
 }
-.Burger-menu{
-    display: flex;
-    size: 6em;
-}
+
 .account{
     display: flex;
     size: 2em;
