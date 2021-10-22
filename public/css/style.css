@@ -1,45 +1,113 @@
-body{
-   
-    background-color: #EAC926;
+body {
+
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
-    
+
 }
-*{
+
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 
 }
+
+
+img {
+    max-width: 100vw;
+}
+
 /* header */
-header{
+header {
     background-color: #EAC926;
     font-family: 'Roboto', sans-serif;
-    width: 100vw;    
-    margin: auto;    
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
 
 }
-header .form{
-    width: 70vw;
-    margin:auto; 
+
+header .logo {
+    width: 45%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+
+}
+
+header .logo img {
+
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+
+}
+
+header .form {
+    display: flex;
+    width: 45%;
+    margin: auto;
     margin-top: 10px;
-    padding: 10px;    
+    padding: 10px;
+    align-items: center;
+    justify-content: space-evenly;
+
 
 }
-header p{
-    width: 70vw;
-    margin:auto; 
+
+header .form .search-bar {
+    width: 85%;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+    padding: 9px;
+    font-size: 14px;
+    height: 24px;
+    transition: .15s ease all;
 }
+
+header .form .search-bar:focus {
+    outline: 0;
+    box-shadow: none;
+    background-color: #efefef;
+    padding-left: 9px;
+    border-right: #dbdbdb solid 1px;
+}
+
+header .form button {
+    width: 15%;
+    background-color: white;
+    border-radius: 0px 5px 5px 0px;
+    border: none;
+    color: #666;
+    height: 24px;
+    transition: .15s ease all;
+}
+
+header .form button:hover {
+    background-color: #ebebeb;
+}
+
+
 header nav {
     margin-top: 10px;
+    display: none;
 }
-header nav ul li a {
-    display: block;
-    text-decoration: none;  
-    text-align: center;
 
+header nav ul {
+    list-style: none;
+    padding: 0;
 }
-header .Burger-menu{
+
+header .Burger-menu {
     display: block;
     width: 30px;
     height: 30px;
@@ -51,15 +119,48 @@ header .Burger-menu{
     color: white;
     margin: auto;
     margin-top: 10px;
+    border-radius: 15%;
+    transition: .3s ease all;
 }
 
-img{
-    max-width: 80vw;
+header .Burger-menu:hover {
+    margin-top: 3px;
+    width: 48px;
+    height: 50px;
+    padding: 12px 13px;
+    font-size: 24px;
+    background-color: #0550ba;
 }
+
+header .hand {
+    font-weight: 400;
+    font-size: calc(12px + 0.4vw);
+    text-align: center;
+    color: #03264c;
+
+}
+
+header p {
+    width: 70vw;
+    margin-left: 10px;
+}
+
+/* agregando banner*/
+
+.banner {
+    width: 100%;
+}
+
+.banner img {
+    width: 100%;
+}
+
+/* Aqui va el Main */
+
 /* main */
 
-main{
-    background-color: gainsboro;
+main {
+    background-color: #ebebeb;
     font-family: 'Roboto', sans-serif;
     padding: 10px;
     width: 90%;
@@ -68,119 +169,647 @@ main{
     box-sizing: border-box;
     margin: auto;
     margin-top: 20px;
-    justify-content: center;    
+    justify-content: center;
+}
 
-}
-main .ultima-visita{
+
+main .ultima-visita {
     width: 70vw;
-    margin: auto; 
-    
+    margin: auto;
 }
-main .ultima-visita .productos{
+
+main .ultima-visita .productos {
     width: 80%;
     margin: auto;
     background-color: white;
-    
+
 }
-main .ultima-visita .productos article{
-    box-shadow: 3px 2px 15px 2px #000000; 
-    margin-top: 20px;   
-    
+
+main .ultima-visita .productos article {
+    box-shadow: 3px 2px 15px 2px #000000;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    margin-bottom: 15px;
+    background-color: white;
+    text-align: left;
+    transition: .15s ease all;
+
+
 }
-main .ultima-visita .productos article img{
-    max-width: 90%;   
+
+main .ultima-visita .productos article:hover {
+    width: 91%;
+}
+
+main .ultima-visita .productos article img {
+    max-width: 90%;
     border-radius: 10px;
-    overflow: hidden; 
+    overflow: hidden;
+}
+
+main .ultima-visita .productos article i {
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    color: #39b54a;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+
+main .ultima-visita .title-section {
+    color: #666;
+    font-size: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 
-
-
-/* Configurando vista para distintos dispositivos, min-width se aplica desde ese valor en adelante  */
-
-@media (min-width: 361px){
-    .Burger-menu{
-        display: none;
-        
-    }
-
+main .ultima-visita .productos article .precios {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
 }
-@media (min-width: 769px){
-    .Burger-menu{
-        display: none;
-        
-    }
-    *{
-        box-shadow:none
 
-    }
-  
-
+main .ultima-visita .productos article .off {
+    color: #39b54a;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
 }
-h1{
-    
+
+main .ultima-visita .productos article .descripcion {
+    display: none;
+}
+
+/*Termianndo main*/ 
+
+h1 {
+
     font-family: 'Roboto', sans-serif;
 
 }
-h2{
-   
+
+h2 {
+
     font-family: 'Roboto', sans-serif;
 
 }
-h3{
+
+h3 {
     font-family: 'Roboto', sans-serif;
 
+
 }
-p{
-  
+
+p {
+
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
 
 }
-.parrafo-Destacado {
-  
-    color: salmon;
-    font-size: 20px;
-}
-.hand{
+
+
+
+.hand {
     display: flex;
     size: 2em;
 }
 
-.account{
+.account {
     display: flex;
     size: 2em;
-    
+
 }
-.login{
-    display: flex;    
+
+.login {
+    display: flex;
     size: 2em;
 }
-.security{
-    display: flex;
-    justify-content: center;
-    color: blue; 
-    size: 6em;
-}
-.credit-card{
+
+.security {
     display: flex;
     justify-content: center;
     color: blue;
     size: 6em;
 }
-.gift{
+
+.credit-card {
     display: flex;
     justify-content: center;
-    color: blue; 
+    color: blue;
     size: 6em;
 }
-strong{
+
+.gift {
+    display: flex;
+    justify-content: center;
+    color: blue;
+    size: 6em;
+}
+
+strong {
     display: flex;
     color: black;
 
 }
-p strong{
-    display: flex;
-    color: black; 
 
+p strong {
+    display: flex;
+    color: black;
+
+}
+
+/* Configurando el footer  */
+footer {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+
+}
+
+footer .icon-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    text-align: center;
+    color: #666;
+}
+
+footer .icon-footer i {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #1259c3;
+}
+
+footer .copyright {
+    color: #666;
+    font-size: small;
+    align-self: center;
+}
+
+
+header nav ul li a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+
+}
+
+header nav .left-nav-bar {
+    align-content: flex-start;
+    padding-left: 10px;
+}
+
+header nav .right-nav-bar {
+    align-content: flex-end;
+    padding-right: 10px;
+}
+
+header nav .right-nav-bar i {
+    margin-left: 4px;
+}
+
+
+header nav ul li a {
+    text-decoration: none;
+    color: #03264c;
+    font-size: calc(8px + 0.6vw);
+    padding: 4px calc(8px + 0.15vw) 4px calc(8px + 0.15vw);
+}
+
+
+
+/* Configurando vista para distintos dispositivos, min-width se aplica desde ese valor en adelante  */
+
+
+@media (min-width: 481px) {
+
+    /* Header Tablet */
+
+    header {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        display: flex;
+    }
+
+
+    header .form {
+        height: 18px;
+    }
+
+    header .hand {
+        width: 32%;
+        font-size: calc(8px + 0.6vw);
+    }
+
+    header nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        font-size: 14px;
+    }
+
+    header nav ul {
+        display: flex;
+    }
+
+    header nav ul li {
+        padding: 4px calc(3px + 0.15vw) 4px calc(3px + 0.15vw);
+        color: #03264c;
+        transition: .4s ease all;
+    }
+
+    header nav ul li:hover {
+        background-color: #ddbe24;
+    }
+
+    header nav .left-nav-bar {
+        align-content: flex-start;
+        padding-left: 10px;
+    }
+
+    header nav .right-nav-bar {
+        align-content: flex-end;
+        padding-right: 10px;
+    }
+
+    header nav .right-nav-bar i {
+        margin-left: 4px;
+    }
+
+    header nav ul li a {
+        text-decoration: none;
+        color: #03264c;
+        font-size: calc(8px + 0.6vw);
+    }
+
+    header .Burger-menu {
+        display: none;
+    }
+
+    /* Final Header Tablet */
+
+    /* Inicio Main Tablet */
+
+    main .ultima-visita {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: stretch;
+        flex-wrap: wrap;
+    }
+
+    main .ultima-visita .title-section {
+        width: 100%;
+        text-align: left;
+    }
+
+    main .ultima-visita .productos article {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        width: 47%;
+        transition: .15s ease all;
+    }
+
+    main .ultima-visita .productos article:hover {
+        width: 48%;
+        box-shadow: 0px 0px 12px rgb(70, 70, 70);
+    }
+
+    main .ultima-visita .productos article .descripcion {
+        display: block;
+        color: #666;
+        margin-top: 15px;
+    }
+
+    /* Final Main Tablet */
+
+
+}
+
+
+/*Escritorio */
+
+@media (min-width: 769px) {
+
+
+    header .Burger-menu {
+        display: none;
+    }
+
+    * {
+        box-shadow: none
+    }
+
+
+    header .form {
+        height: 20px;
+    }
+
+    header .hand {
+        font-size: calc(12px + 0.6vw);
+    }
+
+    header nav ul li {
+        padding: 4px calc(8px + 0.15vw) 4px calc(8px + 0.15vw);
+    }
+
+    header nav .left-nav-bar {
+        align-content: flex-start;
+        padding-left: 10px;
+    }
+
+    header nav .right-nav-bar {
+        align-content: flex-end;
+        padding-right: 10px;
+    }
+
+    header nav ul li a {
+        text-decoration: none;
+        color: #03264c;
+        font-size: 16px;
+    }
+
+    /* Terminando Desktop */
+
+    /* Aqui Main Desktop*/
+
+    main .ultima-visita .productos article {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        min-width: 18%;
+        width: 23%;
+    }
+
+    main .ultima-visita .productos article:hover {
+        width: 24%;
+    }
+
+}
+
+
+/* configurando register*/
+
+.register-main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #ebebeb;
+}
+
+.title {
+    margin: 10px 0;
+}
+
+.register-main .sign-in {
+    display: flex;
+    width: 90%;
+    max-width: 550px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #FFF;
+    padding: 35px 25px;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+.register-main .sign-in input {
+    margin: 2px 0;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 8px;
+    background-color: #ececec;
+    transition: .2s ease all;
+}
+
+.register-main .sign-in input:focus {
+    background-color: #e1e1e1;
+    outline: 0;
+    box-shadow: none;
+    border: none;
+    color: #444;
+}
+
+.register-main .sign-in .rol {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.register-main .sign-in .rol label {
+    background-color: #ececec;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: .2s ease all;
+}
+
+.register-main .sign-in .rol label:hover {
+    background-color: #e1e1e1;
+}
+
+.register-main .sign-in .rol label input {
+    margin-right: 12px;
+}
+
+.register-main .sign-in .categories {
+    display: flex;
+    flex-direction: column;
+    margin-left: calc(20px + 2vw);
+}
+
+.register-main .sign-in .categories label input {
+    margin-right: 12px;
+}
+
+.register-main .sign-in .buttons {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    max-width: 500px;
+}
+
+.register-main .sign-in .buttons button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    transition: .3s ease all;
+    border-radius: 4px;
+    margin-top: 15px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    height: 40px;
+    width: 100px;
+    background-color: #efefef;
+}
+
+.register-main .sign-in .buttons button span {
+    z-index: 3;
+}
+
+.register-main .sign-in .buttons .submit::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    background-color: #0550ba;
+    z-index: 2;
+    top: 0px;
+    left: -200px;
+    transition: .3s ease-in-out left, .1s ease background-color;
+    border-radius: 50% 0;
+    opacity: 1;
+}
+
+.register-main .sign-in .buttons .reset::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    background-color: #cc6c2c;
+    z-index: 2;
+    top: 0;
+    left: -200px;
+    transition: .3s ease-in-out left, .1s ease background-color;
+    border-radius: 50% 0;
+    opacity: 1;
+}
+
+.register-main .sign-in .buttons button:hover {
+    color: #FFF;
+}
+
+
+
+.register-main .sign-in .buttons .submit:hover::after {
+    left: -50px;
+    opacity: 1;
+}
+
+.register-main .sign-in .buttons .reset:hover::after {
+    left: -50px;
+    opacity: 1;
+}
+
+.register-main .sign-in .buttons .submit:active::after {
+    background-color: #00B7FF;
+}
+
+.register-main .sign-in .buttons .reset:active::after {
+    background-color: #d8ac3c;
+}
+
+
+
+/* Configurando login*/
+
+.login-main {
+    display: flex;
+    align-items: center;
+    background-color: #ebebeb;
+    flex-direction: column;
+}
+
+.login-main .login {
+    width: 90%;
+    max-width: 500px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 35px 10px;
+    margin-bottom: 25px;
+}
+
+.login-main .login label {
+    font-weight: 500;
+}
+
+.login-main .login input {
+    margin: 2px 0;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 8px;
+    background-color: #ececec;
+    transition: .2s ease all;
+}
+
+.login-main .login input:focus {
+    background-color: #e1e1e1;
+    outline: 0;
+    box-shadow: none;
+    border: none;
+    color: #444;
+}
+
+.login-main .login button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    transition: .3s ease all;
+    border-radius: 4px;
+    margin-top: 15px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    height: 40px;
+    width: 100px;
+    background-color: #efefef;
+}
+
+.login-main .login button span {
+    z-index: 3;
+}
+
+.login-main .login button::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    background-color: #1259c3;
+    z-index: 2;
+    width: 200px;
+    top: 0px;
+    left: -200px;
+    transition: .3s ease-in-out all;
+    border-radius: 50% 0;
+    opacity: 0;
+}
+
+
+
+.login-main .login button:hover {
+    color: #FFF;
+}
+
+
+
+.login-main .login button:hover::after {
+    left: -50px;
+    opacity: 1;
+}
+
+.login-main .login button:active::after {
+    background-color: #00B7FF;
 }
