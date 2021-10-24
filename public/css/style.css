@@ -133,10 +133,16 @@ header .Burger-menu:hover {
 }
 
 header .hand {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
     font-weight: 400;
     font-size: calc(12px + 0.4vw);
     text-align: center;
     color: #03264c;
+   
 
 }
 
@@ -179,6 +185,7 @@ main .ultima-visita {
 }
 
 main .ultima-visita .productos {
+    display: flex;
     width: 80%;
     margin: auto;
     background-color: white;
@@ -212,7 +219,10 @@ main .ultima-visita .productos article img {
 }
 
 main .ultima-visita .productos article i {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
     font-size: 16px;
     padding: 5px;
     width: 30px;
@@ -221,7 +231,6 @@ main .ultima-visita .productos article i {
     border: 1px solid #39b54a;
     background-color: #FFF;
     border-radius: 50%;
-    position: absolute;
     right: 20px;
     top: -15px;
 }
@@ -262,6 +271,7 @@ h1 {
 h2 {
 
     font-family: 'Roboto', sans-serif;
+    color: #dbdbdb;
 
 }
 
@@ -498,6 +508,8 @@ header nav ul li a {
         display: block;
         color: #666;
         margin-top: 15px;
+        margin-left: 5px;
+        margin-right: 5px;
     }
 
     /* Final Main Tablet */
@@ -573,7 +585,7 @@ header nav ul li a {
     align-items: center;
     flex-direction: column;
     justify-content: space-evenly;
-    background-color: #ebebeb;
+    background-color: #03264c;
 }
 
 .title {
@@ -726,7 +738,7 @@ header nav ul li a {
 .login-main {
     display: flex;
     align-items: center;
-    background-color: #ebebeb;
+    background-color: #03264c;
     flex-direction: column;
 }
 
